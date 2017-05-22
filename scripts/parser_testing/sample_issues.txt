@@ -1,0 +1,9 @@
+SELECT @xml_record_dateOUT = dateadd(HH,[dbo].[time_of_day_hour_parser](     @exec_in_xml.value(N'(/border_wait_time/port[port_number=250401]/passenger_vehicle_lanes/standard_lanes/update_time)[1]', 'nvarchar(max)')),      cast(@exec_in_xml.value(N'(/border_wait_time/port[port_number=250401]/date)[1]','nvarchar(max)') as datetime)),     @xml_wait_timeOUT = [dbo].[border_wait_time_parser](@exec_in_xml.value(N'(/border_wait_time/port[port_number=250401]/passenger_vehicle_lanes/standard_lanes/delay_minutes)[1]','varchar(25)')),     @xml_lanes_openOUT = @exec_in_xml.value(N'(/border_wait_time/port[port_number=250401]/passenger_vehicle_lanes/standard_lanes/lanes_open)[1]','smallint')
+
+
+bad bad
+SELECT @xml_record_dateOUT = dateadd(HH,[dbo].[time_of_day_hour_parser](     @exec_in_xml.value(N'(/border_wait_time/port[port_number=250602]/commercial_vehicle_lanes/standard_lanes/update_time)[1]', 'nvarchar(max)')),      cast(@exec_in_xml.value(N'(/border_wait_time/port[port_number=250602]/date)[1]','nvarchar(max)') as datetime)),     @xml_wait_timeOUT = [dbo].[border_wait_time_parser](@exec_in_xml.value(N'(/border_wait_time/port[port_number=250602]/commercial_vehicle_lanes/standard_lanes/delay_minutes)[1','varchar(25)')),     @xml_lanes_openOUT = @exec_in_xml.value(N'(/border_wait_time/port[port_number=250602]/commercial_vehicle_lanes/standard_lanes/lanes_open)[1]','smallint')
+
+
+(/border_wait_time/port[port_number=250401]/passenger_vehicle_lanes/standard_lanes/delay_minutes)[1]
+(/border_wait_time/port[port_number=250602]/commercial_vehicle_lanes/standard_lanes/delay_minutes)[1
